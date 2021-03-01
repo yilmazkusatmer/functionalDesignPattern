@@ -1,1 +1,1 @@
-# Java Design in functional style
+# Java design dattern in functional style
