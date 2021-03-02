@@ -1,0 +1,2 @@
+# Execute around pattern
+The Execute Around pattern tries to eliminate the boilerplate code that surrounds specific tasks. For example, the tasks specific to a file need to be surrounded by code for the purpose of opening and closing the file.
