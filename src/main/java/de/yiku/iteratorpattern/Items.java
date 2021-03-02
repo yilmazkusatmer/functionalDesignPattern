@@ -1,12 +1,14 @@
 package de.yiku.iteratorpattern;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class Items<E> {
     private List<E> elements;
 
     public Items(List<E> customItems) {
+        Objects.requireNonNull(customItems);
         this.elements = customItems;
     }
 
