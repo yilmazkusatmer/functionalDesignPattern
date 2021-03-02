@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'de.yiku'
+version '1.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    testCompile("org.assertj:assertj-core:3.11.1")
+}
