@@ -11,7 +11,7 @@ public class FileProcessor {
         this.filePath = filePath;
     }
 
-    public  String readAllLines(BufferedReaderProcessor bufferedReaderProcessor) throws IOException {
+    public String readAllLines(BufferedReaderProcessor bufferedReaderProcessor) throws IOException {
         if (bufferedReaderProcessor == null) {
             throw new IllegalArgumentException("Lambda cannot be null!");
         }
