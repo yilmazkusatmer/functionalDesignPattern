@@ -3,6 +3,7 @@ package de.yiku.executearoundpattern;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Objects;
 
 public class FileProcessor {
     private final String filePath;
@@ -12,9 +13,8 @@ public class FileProcessor {
     }
 
     public String readAllLines(BufferedReaderProcessor bufferedReaderProcessor) throws IOException {
-        if (bufferedReaderProcessor == null) {
-            throw new IllegalArgumentException("Lambda cannot be null!");
-        }
+        Objects.requireNonNull(bufferedReaderProcessor, "Lambda cannot be null!");
+
         return readLine(reader -> {
             StringBuilder builder = new StringBuilder();
             String line;
@@ -26,9 +26,8 @@ public class FileProcessor {
     }
 
     public String readLine(BufferedReaderProcessor bufferedReaderProcessor) throws IOException {
-        if (bufferedReaderProcessor == null) {
-            throw new IllegalArgumentException("Lambda cannot be null!");
-        }
+        Objects.requireNonNull(bufferedReaderProcessor, "Lambda cannot be null!");
+
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             return bufferedReaderProcessor.processFile(reader);
         }
