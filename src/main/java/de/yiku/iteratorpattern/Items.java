@@ -21,5 +21,4 @@ public class Items<E> {
             action.accept(customItem);
         }
     }
-
 }

@@ -17,7 +17,5 @@ public class Main {
 
         String allLines = processor.readAllLines(BufferedReader::readLine);
         logger.info(allLines);
-
     }
-
 }

@@ -8,6 +8,7 @@ class VehicleFactoryTest {
 
     @Test
     void assembleBlackCarWithInlineEngine() {
+        // given
         Vehicle givenVehicle = new Car(Color.BLACK, EngineType.INLINE);
 
         // when
@@ -19,6 +20,7 @@ class VehicleFactoryTest {
 
     @Test
     void assembleOrangeTruckWithVEngine() {
+        // given
         Vehicle givenVehicle = new Truck(Color.ORANGE, EngineType.V);
 
         // when
@@ -30,6 +32,7 @@ class VehicleFactoryTest {
 
     @Test
     void assembleYellowBusWithStraightEngine() {
+        // given
         Vehicle givenVehicle = new Bus(Color.YELLOW, EngineType.STRAIGHT);
 
         // when
