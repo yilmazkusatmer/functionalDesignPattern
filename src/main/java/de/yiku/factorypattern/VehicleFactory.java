@@ -1,19 +1,11 @@
 package de.yiku.factorypattern;
 
-import java.util.function.BiFunction;
+public class VehicleFactory {
 
-public enum VehicleFactory {
-    BUS(Bus::new),
-    CAR(Car::new),
-    TRUCK(Truck::new);
-
-    private final BiFunction<Color, EngineType, Vehicle> factory;
-
-    VehicleFactory(BiFunction<Color, EngineType, Vehicle> factory) {
-        this.factory = factory;
+    private VehicleFactory() {
     }
 
-    public BiFunction<Color, EngineType, Vehicle> getFactory() {
-        return factory;
+    public static Vehicle assemble(VehicleType type, Color color, EngineType engineType) {
+        return type.getVehicle().apply(color, engineType);
     }
 }

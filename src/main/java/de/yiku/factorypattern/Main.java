@@ -7,9 +7,9 @@ public class Main {
     private static Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-        Vehicle blackCar = VehicleFactory.CAR.getFactory().apply(Color.BLACK, EngineType.INLINE);
-        Vehicle orangeBus = VehicleFactory.BUS.getFactory().apply(Color.ORANGE, EngineType.V);
-        Vehicle blackTruck = VehicleFactory.TRUCK.getFactory().apply(Color.BLACK, EngineType.FLAT);
+        Vehicle blackCar = VehicleFactory.assemble(VehicleType.CAR, Color.BLACK, EngineType.INLINE);
+        Vehicle orangeBus = VehicleFactory.assemble(VehicleType.BUS, Color.ORANGE, EngineType.V);
+        Vehicle blackTruck = VehicleFactory.assemble(VehicleType.TRUCK, Color.BLACK, EngineType.FLAT);
 
 
         logger.info("assemble {}", blackCar);

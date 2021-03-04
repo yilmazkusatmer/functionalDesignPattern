@@ -11,7 +11,7 @@ class VehicleFactoryTest {
         Vehicle givenVehicle = new Car(Color.BLACK, EngineType.INLINE);
 
         // when
-        Vehicle assembleVehicle = VehicleFactory.CAR.getFactory().apply(Color.BLACK, EngineType.INLINE);
+        Vehicle assembleVehicle = VehicleFactory.assemble(VehicleType.CAR, Color.BLACK, EngineType.INLINE);
 
         // then
         assertThat(assembleVehicle).isEqualTo(givenVehicle);
@@ -22,7 +22,7 @@ class VehicleFactoryTest {
         Vehicle givenVehicle = new Truck(Color.ORANGE, EngineType.V);
 
         // when
-        Vehicle assembleVehicle = VehicleFactory.TRUCK.getFactory().apply(Color.ORANGE, EngineType.V);
+        Vehicle assembleVehicle = VehicleFactory.assemble(VehicleType.TRUCK, Color.ORANGE, EngineType.V);
 
         // then
         assertThat(assembleVehicle).isEqualTo(givenVehicle);
@@ -33,7 +33,7 @@ class VehicleFactoryTest {
         Vehicle givenVehicle = new Bus(Color.YELLOW, EngineType.STRAIGHT);
 
         // when
-        Vehicle assembleVehicle = VehicleFactory.TRUCK.getFactory().apply(Color.YELLOW, EngineType.STRAIGHT);
+        Vehicle assembleVehicle = VehicleFactory.assemble(VehicleType.TRUCK, Color.YELLOW, EngineType.STRAIGHT);
 
         // then
         assertThat(assembleVehicle).isNotEqualTo(givenVehicle);
