@@ -32,5 +32,4 @@ public class FileProcessor {
             return bufferedReaderProcessor.processFile(reader);
         }
     }
-
 }
