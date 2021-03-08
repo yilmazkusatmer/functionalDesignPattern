@@ -1,5 +1,6 @@
 package de.yiku.iteratorpattern;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +12,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ItemsTest {
 
-    private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
     @BeforeEach
@@ -19,39 +19,47 @@ class ItemsTest {
         System.setOut(new PrintStream(outputStreamCaptor));
     }
 
+    @AfterAll
+    public static void tearDown() {
+        System.setOut(System.out);
+    }
+
     @Test
-    public void iterateOverItemsAndPrintln() {
+    void iterateOverItemsAndPrintln() {
         // given
         Items<String> testItems = new Items<>(List.of("ipad", "iphone", "macbook"));
+        String displayItems = "ipad\niphone\nmacbook\n";
 
         // when
         testItems.forEach(System.out::println);
 
         // then
-        assertThat("ipad\niphone\nmacbook\n").isEqualTo(outputStreamCaptor.toString());
+        assertThat(displayItems).isEqualTo(outputStreamCaptor.toString());
     }
 
     @Test
-    public void iterateOverItemsAndUppercasePrintln() {
+    void iterateOverItemsAndUppercasePrintln() {
         // given
         Items<String> testItems = new Items<>(List.of("ipad", "iphone", "macbook"));
+        String displayItems = "IPAD\nIPHONE\nMACBOOK\n";
 
         // when
         testItems.forEach(item -> System.out.println(item.toUpperCase()));
 
         // then
-        assertThat("IPAD\nIPHONE\nMACBOOK\n").isEqualTo(outputStreamCaptor.toString());
+        assertThat(displayItems).isEqualTo(outputStreamCaptor.toString());
     }
 
     @Test
-    public void iterateOverNumbersAndPrintln() {
+    void iterateOverNumbersAndPrintln() {
         // given
         Items<Integer> testNumbers = new Items<>(List.of(1, 2, 3));
+        String displayNumbers = "1\n2\n3\n";
 
         // when
         testNumbers.forEach(System.out::println);
 
         // then
-        assertThat("1\n2\n3\n").isEqualTo(outputStreamCaptor.toString());
+        assertThat(displayNumbers).isEqualTo(outputStreamCaptor.toString());
     }
 }
