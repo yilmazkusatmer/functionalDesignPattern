@@ -16,7 +16,7 @@ class OperationStrategyTest {
         List<String> givenResults = List.of("10 * 4 = 40", "10 ^ 4 = 10000.0");
 
         // when
-        List<String> results = operationStrategy.applyOperations(10, 4);
+        List<String> results = operationStrategy.operationResults(10, 4);
 
         // then
         assertThat(results).isEqualTo(givenResults);

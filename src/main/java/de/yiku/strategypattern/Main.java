@@ -9,7 +9,7 @@ public class Main {
                 PowOperation.EXP, BasicOperation.MINUS);
 
         OperationStrategy strategy = new OperationStrategy(operations);
-        strategy.applyOperations(14, 2).forEach(System.out::println);
+        strategy.operationResults(14, 2).forEach(System.out::println);
 
     }
 }

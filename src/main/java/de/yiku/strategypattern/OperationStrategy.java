@@ -10,7 +10,7 @@ public class OperationStrategy {
         this.operations = operations;
     }
 
-    List<String> applyOperations(Number num1, Number num2) {
+    List<String> operationResults(Number num1, Number num2) {
         return operations.stream()
                 .map(op -> String.format("%d %s %d = ", num1.intValue(), op.toString(), num2.intValue())
                         + op.apply(num1, num2))
