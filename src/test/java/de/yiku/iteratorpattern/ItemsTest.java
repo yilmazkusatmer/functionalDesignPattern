@@ -34,7 +34,7 @@ class ItemsTest {
         testItems.forEach(System.out::println);
 
         // then
-        assertThat(displayItems).isEqualTo(outputStreamCaptor.toString());
+        assertThat(outputStreamCaptor.toString()).hasToString(displayItems);
     }
 
     @Test
@@ -47,7 +47,7 @@ class ItemsTest {
         testItems.forEach(item -> System.out.println(item.toUpperCase()));
 
         // then
-        assertThat(displayItems).isEqualTo(outputStreamCaptor.toString());
+        assertThat(outputStreamCaptor.toString()).hasToString(displayItems);
     }
 
     @Test
@@ -60,6 +60,6 @@ class ItemsTest {
         testNumbers.forEach(System.out::println);
 
         // then
-        assertThat(displayNumbers).isEqualTo(outputStreamCaptor.toString());
+        assertThat(outputStreamCaptor.toString()).hasToString(displayNumbers);
     }
 }

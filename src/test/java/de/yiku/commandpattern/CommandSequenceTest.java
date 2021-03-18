@@ -36,6 +36,6 @@ class CommandSequenceTest {
         sequence.runCommandSequence();
 
         // then
-        assertThat(displayCommands).isEqualTo(outputStreamCaptor.toString());
+        assertThat(outputStreamCaptor.toString()).hasToString(displayCommands);
     }
 }
