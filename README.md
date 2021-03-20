@@ -4,4 +4,4 @@
 3. Decorator pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/decoratorpattern)
 4. Iterator pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/iteratorpattern) 
 5. Command pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/commandpattern) 
-
+6. Strategy pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/strategypattern) 
