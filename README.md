@@ -6,3 +6,4 @@
 5. Command pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/commandpattern) 
 6. Strategy pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/strategypattern) 
 7. Fluent interface pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/fluentinterfacepattern) 
+8. Observer pattern [here](https://github.com/yilmazkusatmer/functionalDesignPattern/tree/main/src/main/java/de/yiku/observerpattern) 
