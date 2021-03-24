@@ -3,7 +3,6 @@ package de.yiku.observerpattern;
 public class Main {
     public static void main(String[] args) {
         WeatherData data = new WeatherData();
-        Weather weather = new Weather(10.1, 0.5, 0.2);
         data.addObserver(w ->
                 System.out.printf("Current temperature is %.2f Celius and humidity %.2f!%n", w.getTemperature(), w.getHumidity())
         );
@@ -16,6 +15,7 @@ public class Main {
                 System.out.printf("temperature: %.2f humidity: %.2f pressure: %.2f!%n", w.getTemperature(), w.getHumidity(), w.getPressure())
         );
 
-        data.setMeasurements(weather);
+        data.setMeasurements(new Weather(10.1, 0.5, 0.2));
+        data.setMeasurements(new Weather(13.0, 2.0, 3.5));
     }
 }
