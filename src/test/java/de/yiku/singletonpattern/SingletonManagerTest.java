@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class SingletonSupplierTest {
+class SingletonManagerTest {
 
     @Test
-    void testSingletonSupplier() {
+    void testSingletonInstance() {
         // given + when
         Singleton instance1 = SingletonManager.getInstance();
         Singleton instance2 = SingletonManager.getInstance();
